@@ -128,6 +128,7 @@ main {
   align-items: center;
   color: white;
   cursor: pointer;
+  user-select: none;
 }
 
 .control-button {
@@ -141,7 +142,7 @@ main {
 
 .operation-button {
   background-color: rgb(255, 159, 10);
-  font-size: 30px;
+  font-size: 60px;
 }
 
 .number-button {
