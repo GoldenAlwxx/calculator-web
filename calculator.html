@@ -20,63 +20,63 @@
         <img class="menu-icon" src="icons/hamburger-icon.svg" />
 
         <div class="calculations">
-          <div class="previous-calculation js-previous-calculation">
-            <span class="js-previous-span">38,670&#xF7;50,000</span>
+          <div class="previous-calculation">
+            <span class="js-previous-text">38,670&#xF7;50,000</span>
           </div>
-          <div class="current-calculation js-current-calculation">
-            <span class="js-current-span" style="direction: ltr">83253</span>
+          <div class="current-calculation">
+            <span class="js-current-text" style="direction: ltr">83253</span>
           </div>
         </div>
         <div class="buttons">
           <button class="control-button js-reset-button">AC</button>
           <button class="control-button">+/-</button>
           <button class="control-button">%</button>
-          <button class="operation-button" onclick="renderButtonAction('/')">
+          <button class="operation-button" data-action="/">
             <img src="icons/divison-icon.png" />
           </button>
-          <button class="number-button" onclick="renderButtonAction('7')">
+          <button class="number-button js-number-button" data-action="7">
             7
           </button>
-          <button class="number-button" onclick="renderButtonAction('8')">
+          <button class="number-button js-number-button" data-action="8">
             8
           </button>
-          <button class="number-button" onclick="renderButtonAction('9')">
+          <button class="number-button js-number-button" data-action="9">
             9
           </button>
-          <button class="operation-button" onclick="renderButtonAction('*')">
+          <button class="operation-button" data-action="*">
             <img src="icons/times.png" />
           </button>
-          <button class="number-button" onclick="renderButtonAction('4')">
+          <button class="number-button js-number-button" data-action="4">
             4
           </button>
-          <button class="number-button" onclick="renderButtonAction('5')">
+          <button class="number-button js-number-button" data-action="5">
             5
           </button>
-          <button class="number-button" onclick="renderButtonAction('6')">
+          <button class="number-button js-number-button" data-action="6">
             6
           </button>
-          <button class="operation-button" onclick="renderButtonAction('-')">
+          <button class="operation-button" data-action="-">
             <img src="icons/minus.png" />
           </button>
-          <button class="number-button" onclick="renderButtonAction('1')">
+          <button class="number-button js-number-button" data-action="1">
             1
           </button>
-          <button class="number-button" onclick="renderButtonAction('2')">
+          <button class="number-button js-number-button" data-action="2">
             2
           </button>
-          <button class="number-button" onclick="renderButtonAction('3')">
+          <button class="number-button js-number-button" data-action="3">
             3
           </button>
-          <button class="operation-button" onclick="renderButtonAction('+')">
+          <button class="operation-button" data-action="+">
             <img src="icons/plus.png" />
           </button>
-          <button class="number-button no-use-button">
+          <button class="number-button js-number-button no-use-button">
             <img src="icons/calculator.png" />
           </button>
-          <button class="number-button" onclick="renderButtonAction('0')">
+          <button class="number-button js-number-button" data-action="0">
             0
           </button>
-          <button class="number-button" onclick="renderButtonAction(',')">
+          <button class="number-button js-number-button" data-action=",">
             ,
           </button>
           <button class="operation-button">=</button>
