@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator | GoldenAlwxx</title>
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/general.css" />
+  </head>
+  <body>
+    <div class="phone-container">
+      <header>
+        <span class="time">9:41</span>
+        <img src="icons/signal-icon.png" alt="wifi-icon" />
+        <img src="icons/wifi-icon.png" alt="wifi-icon" />
+        <img src="icons/battery-icon.png" alt="wifi-icon" />
+      </header>
+      <main>
+        <img class="menu-icon" src="icons/hamburger-icon.svg" />
+
+        <div class="calculations">
+          <div class="previous-calculation js-previous-calculation">
+            <span>38,670&#xF7;50,000</span>
+          </div>
+          <div class="current-calculation js-current-calculation">
+            <span class="js-current-text" style="direction: ltr">83253</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="control-button js-reset-button">AC</button>
+          <button class="control-button">+/-</button>
+          <button class="control-button">%</button>
+          <button class="operation-button" onclick="renderButtonAction('/')">
+            <img src="icons/divison-icon.png" />
+          </button>
+          <button class="number-button" onclick="renderButtonAction('7')">
+            7
+          </button>
+          <button class="number-button" onclick="renderButtonAction('8')">
+            8
+          </button>
+          <button class="number-button" onclick="renderButtonAction('9')">
+            9
+          </button>
+          <button class="operation-button" onclick="renderButtonAction('*')">
+            <img src="icons/times.png" />
+          </button>
+          <button class="number-button" onclick="renderButtonAction('4')">
+            4
+          </button>
+          <button class="number-button" onclick="renderButtonAction('5')">
+            5
+          </button>
+          <button class="number-button" onclick="renderButtonAction('6')">
+            6
+          </button>
+          <button class="operation-button" onclick="renderButtonAction('-')">
+            <img src="icons/minus.png" />
+          </button>
+          <button class="number-button" onclick="renderButtonAction('1')">
+            1
+          </button>
+          <button class="number-button" onclick="renderButtonAction('2')">
+            2
+          </button>
+          <button class="number-button" onclick="renderButtonAction('3')">
+            3
+          </button>
+          <button class="operation-button" onclick="renderButtonAction('+')">
+            <img src="icons/plus.png" />
+          </button>
+          <button class="number-button no-use-button">
+            <img src="icons/calculator.png" />
+          </button>
+          <button class="number-button" onclick="renderButtonAction('0')">
+            0
+          </button>
+          <button class="number-button" onclick="renderButtonAction(',')">
+            ,
+          </button>
+          <button class="operation-button">=</button>
+        </div>
+      </main>
+
+      <footer>
+        <img src="icons/field.png" />
+      </footer>
+    </div>
+
+    <!-- Here are the JavaScript files for this page. -->
+  </body>
+</html>
