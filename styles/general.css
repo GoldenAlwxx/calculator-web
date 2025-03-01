@@ -1,7 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   color: white;
@@ -15,7 +15,9 @@ body {
 
 .phone-container {
   width: 390px;
+  min-width: 390px;
   height: 844px;
+  min-height: 844px;
   background-color: black;
   border: 4px solid white;
   border-radius: 40px;
@@ -64,11 +66,6 @@ main {
   height: 100%;
 }
 
-.previous-calculation {
-  /* margin-top: 220px !important; */
-  color: rgb(142, 142, 148);
-  font-size: 31px;
-}
 
 .calculations {
   direction:rtl;
@@ -93,11 +90,18 @@ main {
   left: 24px;
 }
 
+.previous-calculation {
+  /* margin-top: 220px !important; */
+  color: rgb(142, 142, 148);
+  font-size: 31px;
+}
+
 .current-calculation {
   font-size: 70px;
   top: 270px;
 }
 
+.previous-calculation::before,
 .current-calculation::before {
   content: "";
   position: absolute;
@@ -153,7 +157,7 @@ main {
 .number-button img,
 .operation-button img {
   filter: brightness(0) invert(1);
-  width: 65%;
+  width: 60%;
 }
 
 .buttons {
@@ -164,6 +168,7 @@ main {
   position: absolute;
   bottom: 60px;
   right: 27px;
+  left: 27px;
   gap: 6px;
   margin: 0;
 }

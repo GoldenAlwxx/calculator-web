@@ -78,7 +78,7 @@ function formatExpression(expression) {
   **Returns:**
   - (String): The formatted number string.
 */
-function checkNumber(string) {
+export function checkNumber(string) {
   let [integerPart, decimalPart] = string.split(",");
 
   // Remove existing dots to avoid incorrect formatting
