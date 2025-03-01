@@ -5,17 +5,23 @@ export function resetCalculator(previousOperationElement, currentOperationElemen
 
 export function renderNumber(action, currentOperationElement) {
   const lastCharacter = currentOperationElement.innerText.slice(-1);
+  const secondToLastCharacter = currentOperationElement.innerText.slice(-2, -1);
   
-  console.log('received');
-  if (action === ',') {
+  if (action === '0' && ["*", "+", "-", "/"].includes(secondToLastCharacter) && lastCharacter === '0') {
+    alert('Invalid input.');
+
+  } else if (action === ',') {
     const parts = currentOperationElement.innerText.split(/[*+\-/]/);
     const lastPart = parts[parts.length - 1];
+
     if (!lastPart.includes(",") && !["*", "+", "-", "/"].includes(lastCharacter)) {
       currentOperationElement.innerHTML += action;
     } else {
       alert("Invalid operation.");
     }
 
+  } else if (["*", "+", "-", "/"].includes(secondToLastCharacter) && lastCharacter === '0') {
+    currentOperationElement.innerText = currentOperationElement.innerText.slice(0, -1) + action;
   } else if (currentOperationElement.innerText === '0') {
     currentOperationElement.innerText = action;
     console.log('updated2');
