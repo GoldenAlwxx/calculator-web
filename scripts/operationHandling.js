@@ -44,7 +44,3 @@ export function calculate(expression) {
   return evaluate(expression);
 }
 
-// Example usage
-const input = "2.345.920,29374+2.745.356/230*4.345,29321";
-const result = calculate(input);
-console.log(result); // Output the result
