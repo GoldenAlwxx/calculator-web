@@ -1,3 +1,4 @@
+import { operationDone } from "./general.js";
 export const resetButtonElement = document.querySelector(".js-reset-button");
 export const resetButtonImage = document.createElement("img");
 resetButtonImage.src = "icons/backspace-icon.png"; // Set the path to your image
@@ -45,7 +46,7 @@ export function renderNumber(action, currentOperationElement) {
 }
 
 export function checkOperation(currentOperationElement) {
-  if (currentOperationElement.innerText !== "0") {
+  if (currentOperationElement.innerText !== "0" && !operationDone) {
     resetButtonImage.style.display = "inline"; // Show the image
     resetButtonElement.innerHTML = ""; // Clear the button text
     resetButtonElement.appendChild(resetButtonImage); // Append the image

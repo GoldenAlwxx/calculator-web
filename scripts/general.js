@@ -4,29 +4,43 @@ const previousOperationElement = document.querySelector('.js-previous-text');
 const currentOperationElement = document.querySelector('.js-current-text');
 
 let resetTimeout;
+export let operationDone = false;
 
 /* Buttons Events Listeners */
 
 document.querySelectorAll('.js-number-button')
   .forEach(button => { 
     const action = button.dataset.action; // The number imputed by the user
-    button.addEventListener('click', () => { expressionHandling.renderNumber(action, currentOperationElement) });
+    button.addEventListener('click', () => { 
+      expressionHandling.renderNumber(action, currentOperationElement);
+      operationDone = false;
+      console.log(operationDone);
+      expressionHandling.checkOperation(currentOperationElement);
+    });
   });
 
 document.querySelectorAll('.js-operation-button')
   .forEach(button => { 
     const action = button.dataset.action; // The operator imputed by the user
-    button.addEventListener('click', () => { expressionHandling.renderOperator(action, currentOperationElement) });
+    button.addEventListener('click', () => { 
+      expressionHandling.renderOperator(action, currentOperationElement) 
+      operationDone = false;
+      console.log(operationDone);
+      expressionHandling.checkOperation(currentOperationElement);
+    });
   });
 
 document.querySelector('.js-equal-button')
   .addEventListener('click', () => { 
     previousOperationElement.innerHTML = currentOperationElement.innerText;
     currentOperationElement.innerHTML = expressionHandling.checkNumber(operationHandling.calculate(currentOperationElement.innerText)); 
+    operationDone = true;
+    console.log(operationDone);
+    expressionHandling.checkOperation(currentOperationElement);
   });
 
 expressionHandling.resetButtonElement.addEventListener("click", () => {
-  if (expressionHandling.resetButtonImage.style.display === "inline") {
+  if (expressionHandling.resetButtonImage.style.display === "inline" && !operationDone) {
     let currentText = currentOperationElement.innerText;
     currentOperationElement.innerHTML = expressionHandling.formatExpression(
       currentText.slice(0, -1) || "0"
