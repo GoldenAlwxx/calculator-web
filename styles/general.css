@@ -134,6 +134,7 @@ main {
   color: white;
   cursor: pointer;
   user-select: none;
+  transition: all 0.15s;
 }
 
 .control-button {
@@ -159,6 +160,12 @@ main {
 .operation-button img {
   filter: brightness(0) invert(1);
   width: 60%;
+}
+
+.control-button:active,
+.number-button:active,
+.operation-button:active {
+  filter: brightness(200%);
 }
 
 .buttons {

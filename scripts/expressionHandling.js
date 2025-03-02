@@ -1,6 +1,14 @@
+export const resetButtonElement = document.querySelector(".js-reset-button");
+export const resetButtonImage = document.createElement("img");
+resetButtonImage.src = "icons/backspace-icon.png"; // Set the path to your image
+resetButtonImage.style.display = "none"; // Initially hide the image
+resetButtonElement.appendChild(resetButtonImage);
+
 export function resetCalculator(previousOperationElement, currentOperationElement) {
   previousOperationElement.innerHTML = "";
   currentOperationElement.innerHTML = "0";
+  resetButtonImage.style.display = "none"; 
+  resetButtonElement.innerHTML = "AC";
 }
 
 export function renderNumber(action, currentOperationElement) {
@@ -32,6 +40,19 @@ export function renderNumber(action, currentOperationElement) {
     console.log('updated3');
     currentOperationElement.innerText = formatExpression(currentOperationElement.innerText);
   }
+
+  checkOperation(currentOperationElement);
+}
+
+export function checkOperation(currentOperationElement) {
+  if (currentOperationElement.innerText !== "0") {
+    resetButtonImage.style.display = "inline"; // Show the image
+    resetButtonElement.innerHTML = ""; // Clear the button text
+    resetButtonElement.appendChild(resetButtonImage); // Append the image
+  } else {
+    resetButtonImage.style.display = "none"; // Hide the image
+    resetButtonElement.innerHTML = "AC"; // Reset the button text
+  }
 }
 
 export function renderOperator(action, currentOperationElement) {
@@ -56,7 +77,7 @@ export function renderOperator(action, currentOperationElement) {
   **Returns:**
   - (String): The formatted expression.
 */
-function formatExpression(expression) {
+export function formatExpression(expression) {
   return expression
     .split(/([*+\-/])/)
     .map((part) => {
