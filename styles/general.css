@@ -140,7 +140,7 @@ main {
   width: 20px; /* Adjust the width as needed */
   background: linear-gradient(
     to right,
-    rgb(8, 8, 8),
+    rgb(10, 10, 10),
     rgba(0, 0, 0, 0)
   ); /* Gradient effect */
   pointer-events: none; /* Ensure the gradient does not interfere with interactions */
