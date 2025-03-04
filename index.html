@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator | GoldenAlwxx</title>
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/general.css" />
+  </head>
+  <body>
+    <div class="page-header">
+      <a class="back-button" href="https://github.com/GoldenAlwxx/calculator-web/tree/master">GitHub Repository</a>
+      <div>
+        <div class="title">CALCULATOR-WEB</div>
+        <div class="author">By Simion Alex</div>
+      </div>
+      <div class="socials-container">
+        <p>Socials:</p>
+        <a href="https://www.instagram.com/simioni.alexx/">Instagram</a>
+        <a href="https://www.linkedin.com/in/simion-alex-a7942133a/">LinkedIn</a>
+        <a href="https://x.com/simoni_alexx">Twitter</a>
+      </div>
+    </div>
+
+    <div class="phone-container">
+      <header>
+        <img draggable="false" src="header.png" alt="phone-header"/>
+      </header>
+      <main>
+        <img draggable="false" class="menu-icon" src="icons/hamburger-icon.svg" />
+
+        <div class="calculations">
+          <div class="previous-calculation">
+            <span class="js-previous-text" style="direction: ltr;"></span>
+          </div>
+          <div class="current-calculation">
+            <span class="js-current-text" style="direction: ltr">0</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="control-button js-reset-button">AC</button>
+          <button class="control-button js-control-button">+/-</button>
+          <button class="control-button js-control-button">%</button>
+          <button class="operation-button js-operation-button" data-action="/">
+            <img draggable="false" src="icons/divison-icon.png" />
+          </button>
+          <button class="number-button js-number-button" data-action="7">
+            7
+          </button>
+          <button class="number-button js-number-button" data-action="8">
+            8
+          </button>
+          <button class="number-button js-number-button" data-action="9">
+            9
+          </button>
+          <button class="operation-button js-operation-button" data-action="*">
+            <img draggable="false" src="icons/times.png" />
+          </button>
+          <button class="number-button js-number-button" data-action="4">
+            4
+          </button>
+          <button class="number-button js-number-button" data-action="5">
+            5
+          </button>
+          <button class="number-button js-number-button" data-action="6">
+            6
+          </button>
+          <button class="operation-button js-operation-button" data-action="-">
+            <img draggable="false" src="icons/minus.png" />
+          </button>
+          <button class="number-button js-number-button" data-action="1">
+            1
+          </button>
+          <button class="number-button js-number-button" data-action="2">
+            2
+          </button>
+          <button class="number-button js-number-button" data-action="3">
+            3
+          </button>
+          <button class="operation-button js-operation-button" data-action="+">
+            <img draggable="false" src="icons/plus.png" />
+          </button>
+          <button class="number-button no-use-button">
+            <img draggable="false" src="icons/calculator.png" />
+          </button>
+          <button class="number-button js-number-button" data-action="0">
+            0
+          </button>
+          <button class="number-button js-number-button" data-action=",">
+            ,
+          </button>
+          <button class="operation-button js-equal-button">=</button>
+        </div>
+      </main>
+
+      <footer>
+        <img draggable="false" src="icons/field.png" />
+      </footer>
+    </div>
+
+    <!-- Here are the JavaScript files for this page. -->
+     <script type="module" src="scripts/general.js"></script>
+  </body>
+</html>
