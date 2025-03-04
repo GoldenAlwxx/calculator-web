@@ -23,8 +23,12 @@ export function renderNumber(action, currentOperationElement) {
     const parts = currentOperationElement.innerText.split(/[*+\-/]/);
     const lastPart = parts[parts.length - 1];
 
-    if (!lastPart.includes(",") && !["*", "+", "-", "/"].includes(lastCharacter)) {
-      currentOperationElement.innerHTML += action;
+    if (!lastPart.includes(",")) {
+      if (!["*", "+", "-", "/"].includes(lastCharacter)) {
+        currentOperationElement.innerHTML += action;
+      } else {
+        currentOperationElement.innerHTML += `0${action}`;
+      }
     } else {
       alert("Invalid operation.");
     }

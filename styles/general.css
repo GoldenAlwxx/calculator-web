@@ -162,10 +162,40 @@ main {
   width: 60%;
 }
 
-.control-button:active,
+/* .control-button:active,
 .number-button:active,
 .operation-button:active {
   filter: brightness(200%);
+} */
+
+.brightenAnim {
+  animation: brighten 0.15s forwards, darken 0.20s 0.20s forwards;
+}
+
+.brighten {
+  animation: brighten 0.15s forwards;
+}
+
+.darken {
+  animation: darken 0.20s forwards;
+}
+
+@keyframes brighten {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes darken {
+  from {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+  }
+  to {
+    box-shadow: none;
+  }
 }
 
 .buttons {
